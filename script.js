@@ -24,6 +24,8 @@ const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
 const scissorsBtn = document.getElementById('scissors');
 
+// bring in all other elements
+
 // add event listener to rock button
 rockBtn.addEventListener('click', function() {
     // get the text of the rock

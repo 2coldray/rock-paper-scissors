@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -30,4 +31,22 @@ body {
 
 #scissors {
     background-color: rgb(95, 95, 199);
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.results div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.results div span {
+    font-size: 50px;
 }
