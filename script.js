@@ -53,28 +53,28 @@ function playRound(playerSelection, computerSelection) {
 }
 
 //playRound(playerSelection, computerSelection);
-let play = true;
+// let play = true;
 // Game function
 // write variables to keep score
-function game() {
-    // loop to 5 and call play around on each iteration
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt('Enter rock, paper, or scissors');
-        const computerSelection = computerPlay();
-        playRound(playerSelection, computerSelection);
-    }
-    play = false;
-    if (userScore > computerScore) {
-        console.log('You won beat the computer');
-    } else {
-        console.log('You lost to the computer');
-    }
+// function game() {
+//     // loop to 5 and call play around on each iteration
+//     for (let i = 0; i < 5; i++) {
+//         const playerSelection = prompt('Enter rock, paper, or scissors');
+//         const computerSelection = computerPlay();
+//         playRound(playerSelection, computerSelection);
+//     }
+//     play = false;
+//     if (userScore > computerScore) {
+//         console.log('You won beat the computer');
+//     } else {
+//         console.log('You lost to the computer');
+//     }
 
-}
+// }
 
 // game loop created
-while (play) {
-    game();
-}
+// while (play) {
+//     game();
+// }
 
 
