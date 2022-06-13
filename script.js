@@ -25,6 +25,10 @@ const paperBtn = document.getElementById('paper');
 const scissorsBtn = document.getElementById('scissors');
 
 // bring in all other elements
+const roundResults = document.getElementById('round');
+const userScoreEl = document.getElementById('user-score');
+const computerScoreEl = document.getElementById('computer-score');
+const tieScoreEl = document.getElementById('tie-score');
 
 // add event listener to rock button
 rockBtn.addEventListener('click', function() {
@@ -69,24 +73,38 @@ function playRound(playerSelection, computerSelection) {
     if (playerChoice === 'rock' && computerSelection === 'scissors') {
         console.log('You Win! Rock beats Scissors');
         userScore++;
+        roundResults.textContent = 'You Win! Rock beats Scissors.';
+        userScoreEl.textContent = userScore;
     } else if (playerChoice === 'rock' && computerSelection === 'paper') {
         console.log('You lose! Paper beats rock!');
         computerScore++;
+        roundResults.textContent = 'You Lose! Paper beats Rock.';
+        computerScoreEl.textContent = computerScore;
     } else if (playerChoice === 'paper' && computerSelection === 'rock') {
         console.log('You Win! Paper beats rock!');
         userScore++;
+        roundResults.textContent = 'You Win! Paper beats Rock.';
+        userScoreEl.textContent = userScore;
     } else if (playerChoice === 'paper' && computerSelection === 'scissors') {
         console.log('You Lose! Scissors beats paper');
         computerScore++;
+        roundResults.textContent = 'You Lose! Scissors beats Paper.'
+        computerScoreEl.textContent = computerScore;
     } else if (playerChoice === 'scissors' && computerSelection === 'paper') {
         console.log('You Win! Scissors beats paper');
         userScore++;
+        roundResults.textContent = 'You Win! Scissors beats Paper.';
+        userScoreEl.textContent = userScore;
     } else if (playerChoice === 'scissors' && computerSelection === 'rock') {
         console.log('You lose! Rock beats Scissors');
         computerScore++;
+        roundResults.textContent = 'You Lose! Rock beats Scissors.'
+        computerScoreEl.textContent = computerScore;
     } else {
         console.log('You tied!');
         ties++;
+        roundResults.textContent = 'You Tied!';
+        tieScoreEl.textContent = ties;
     }
 }
 
