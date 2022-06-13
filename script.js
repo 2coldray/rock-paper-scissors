@@ -66,6 +66,7 @@ let ties = 0;
 
 // Play round function
 function playRound(playerSelection, computerSelection) {
+
     // convert playerSelection to lower case for comparison
     const playerChoice = playerSelection.toLowerCase();
 
@@ -106,7 +107,26 @@ function playRound(playerSelection, computerSelection) {
         roundResults.textContent = 'You Tied!';
         tieScoreEl.textContent = ties;
     }
+
+    if (userScore === 5) {
+        roundResults.textContent = 'You have beat the computer!';
+        userScore = 0
+        computerScore = 0;
+        ties = 0;
+        userScoreEl.textContent = 0;
+        computerScoreEl.textContent = 0;
+        tieScoreEl.textContent = 0;
+    } else if (computerScore === 5) {
+        roundResults.textContent = 'The computer has beat you!';
+        userScore = 0
+        computerScore = 0;
+        ties = 0;
+        userScoreEl.textContent = 0;
+        computerScoreEl.textContent = 0;
+        tieScoreEl.textContent = 0;
+    }
 }
+
 
 //playRound(playerSelection, computerSelection);
 let play = true;
